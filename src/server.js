@@ -2,6 +2,9 @@ const express = require("express")
 const server = express()
 const routes = require("./routes")
 
+// habilitar o uso do req.body
+server.use(express.urlencoded( {extended: true }))
+
 //usando template engine
 server.set('view engine', 'ejs')
 
